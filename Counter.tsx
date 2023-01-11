@@ -4,7 +4,7 @@ import './style.css';
 
 // arrow functions
 
-export const Counter = () => {
+export const Counter = (props) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
     console.log('useEffect');
@@ -22,5 +22,9 @@ export const Counter = () => {
   return (
   <div className={'counter'}>
     {count}
+    <div>{10 + 52}</div>
+    {
+      [1, 2, 3].map(v => <div>{props.title + v}</div>)
+    }
   </div>);
 };

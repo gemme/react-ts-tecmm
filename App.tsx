@@ -2,18 +2,20 @@ import * as React from 'react';
 import './style.css';
 import {MyComponent} from './MyComponent';
 import {Counter} from './Counter';
-
+import {MyForm} from './MyForm';
+MyForm
 export class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      mount: true
+      mount: false
     };
   }
 
   render(){
     return (
       <React.Fragment>
+      <MyForm />
        {this.state.mount && <MyComponent
           name={'Jose'}
           lastname={'Martinez'}
@@ -33,7 +35,8 @@ export class App extends React.Component {
           }
         }>Mount/Unmount</button>
       
-      <Counter />
+      {this.state.mount && <Counter title={'My counter'}/>}
+
       </React.Fragment>
     );
   }

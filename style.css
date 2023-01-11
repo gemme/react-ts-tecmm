@@ -1,0 +1,15 @@
+h1, p {
+  font-family: Lato;
+}
+
+
+.job{
+  color: lightgrey;
+  font-size: 20px;
+  height: 50px;
+}
+
+.counter{
+  font-size: 100px;
+  color:blueviolet;
+}
